@@ -1,0 +1,22 @@
+import math
+def normal_cdf(x):
+    """Calcula a função de distribuição cumulativa para a normal padrão."""
+    return 0.5 * (1 + math.erf(x / math.sqrt(2)))
+# (a) 
+prob_a = normal_cdf(1.42) - normal_cdf(0)
+print(f"(a) P(0 <= Z <= 1.42): {prob_a:.4f}")
+# (b) 
+prob_b = normal_cdf(0) - normal_cdf(-0.73)
+print(f"(b) P(-0.73 <= Z <= 0): {prob_b:.4f}")
+# (c) 
+prob_c = normal_cdf(2.01) - normal_cdf(-1.37)
+print(f"(c) P(-1.37 <= Z <= 2.01): {prob_c:.4f}")
+# (d) 
+prob_d = normal_cdf(1.26) - normal_cdf(0.65)
+print(f"(d) P(0.65 <= Z <= 1.26): {prob_d:.4f}")
+# (e) 
+prob_e = 1 - normal_cdf(1.13)
+print(f"(e) P(Z >= 1.13): {prob_e:.4f}")
+# (f) 
+prob_f = normal_cdf(0.5) - normal_cdf(-0.5)
+print(f"(f) P(|Z| <= 0.5): {prob_f:.4f}")
